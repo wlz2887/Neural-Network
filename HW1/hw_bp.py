@@ -83,7 +83,7 @@ def train(rate,Epoch):
                 print(Loss/194)
                 loss.append(Loss[0]/194)
 
-def validation:#作图验证
+def validation():#作图验证
     I=np.linspace(-6,6,100)
     for i in I:
         for j in I:
@@ -99,4 +99,4 @@ def validation:#作图验证
                 plt.scatter(i,j,c='blue',s=2)
                 
 train(0.03,5000)
-validation
+validation()
