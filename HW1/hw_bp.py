@@ -52,7 +52,7 @@ loss = []
 def train(rate,Epoch):
     for times in range(0,Epoch):
         Loss=0
-        for i in range(0,194):
+        for i in range(0,194): #on-line learning
             input_layer=x[i]
             true_val=y[i]
             hidden = np.dot(v1,input_layer)+np.dot(u1,input_layer**2)+Bias[0]
@@ -79,8 +79,8 @@ def train(rate,Epoch):
 
             #记录loss变化
             Loss += 0.5*(true_val-output)**2 
-            if(i==193 and times % 100 == 0):
-                print(Loss/194)
+            if(i==193 and times % 100 == 0): #you can change the interval of recording loss as you wish
+                print('The loss of Epoch ',times,' is ',Loss/194)
                 loss.append(Loss[0]/194)
 
 def validation():#作图验证
