@@ -12,6 +12,11 @@ import matplotlib.pyplot as plt
 #true_val:真实值
 
 
+data = np.loadtxt('./two-spiral traing data(update).txt') #change the path to your own path
+x = data[:,0:2]
+y = data[:,-1]
+
+
 #sigmoid函数
 def sigmoid(x):
     return 1.0 / (1.0+np.exp(-x))
