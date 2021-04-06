@@ -1,8 +1,11 @@
+#*-*coding:utf-8*-*
 import numpy as np
 import random
 from random import random
 from random import seed
 import math
+import matplotlib
+matplotlib.use('AGG')
 import matplotlib.pyplot as plt
 import time
 
@@ -87,6 +90,7 @@ print(start-end)
 
 def validation():#作图验证
     I=np.linspace(-6,6,100)
+    plt.figure()
     for i in I:
         for j in I:
             input_layer=np.array([i,j])
