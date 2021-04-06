@@ -86,7 +86,7 @@ for times in range(0,Epoch):
         if(i==193): #you can change the interval of recording loss as you wish
             loss.append(Loss[0]/194)
 end = time.perf_counter()
-print(start-end)
+print(end-start)
 
 def validation():#作图验证
     I=np.linspace(-6,6,100)
