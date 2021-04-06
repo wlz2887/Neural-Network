@@ -99,5 +99,6 @@ def validation():#作图验证
                 plt.scatter(i,j,c='orange',s=2)
             else:
                 plt.scatter(i,j,c='blue',s=2)
-                
+    plt.savefig('./result.png')
+    plt.close()
 validation()
