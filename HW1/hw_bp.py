@@ -92,10 +92,11 @@ for experiment in range(0,3)://选取不同学习率进行训练
     end = time.perf_counter()
     print(end-start)
 
-    Output = np.zeros(100)
-    a=np.linspace(-6,6,100)
+    Res=300
+    Output = np.zeros(Res)
+    a=np.linspace(-6,6,Res)
     for i in a:
-        b = np.ones(100)*i
+        b = np.ones(Res)*i
         c=np.vstack((a,b))
         input_layer = c
         hidden = np.dot(v1,input_layer)+np.dot(u1,input_layer**2)+Bias[0]
