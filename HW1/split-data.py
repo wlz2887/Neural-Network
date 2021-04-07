@@ -6,7 +6,7 @@ White = np.arange(1,194,2)
 
 
 #纵向对半分，加一点重叠部分
-a,b = s[Black],x[White]
+a,b = x[Black],x[White]
 tmpa = a[np.argsort(a[:,0]),:]
 tmpb = b[np.argsort(b[:,0]),:]
 W1 = tmpb[0:52]
