@@ -31,21 +31,21 @@ Label = train_label
 Label[a] = 1
 Label[b] = -1
 Label[c] = -1
-Model_a = SVC(gamma='auto',cache_size=5000,probability=False,C=0.02)
+Model_a = SVC(gamma='auto',cache_size=5000,probability=False,C=0.03)
 Model_a.fit(Train_data,Label)
 res_a = Model_a.decision_function(Test_data)
 
 Label[a] = -1
 Label[b] = 1
 Label[c] = -1
-Model_b = SVC(gamma='auto',cache_size=5000,probability=False,C=0.02)
+Model_b = SVC(gamma='auto',cache_size=5000,probability=False,C=0.03)
 Model_b.fit(Train_data,Label)
 res_b = Model_b.decision_function(Test_data)
 
 Label[a] = -1
 Label[b] = -1
 Label[c] = 1
-Model_c = SVC(gamma='auto',cache_size=5000,probability=False,C=0.02)
+Model_c = SVC(gamma='auto',cache_size=5000,probability=False,C=0.03)
 Model_c.fit(Train_data,Label)
 res_c = Model_c.decision_function(Test_data)
 
