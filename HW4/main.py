@@ -50,8 +50,6 @@ for i in range(0,4):
 
     for _ in range(79):
         dat.append(a[_*43:_*43+43])
-
-        dat.append(a[_*43:_*43+43])
         tag.append(b[_*43:_*43+43])
     dat = torch.from_numpy(np.array(dat)).double()
     tag = torch.from_numpy(np.array(tag)).long()
